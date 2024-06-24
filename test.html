@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <img src="iiiiiiMobile.svg" id="adaptive-image" alt="Адаптивная картинка">
+    <script>
+        window.onresize = function(event) {
+            var image = document.getElementById('adaptive-image');
+            if (window.innerWidth < 768) {
+                image.src = 'iiiiiiMobile.svg';
+            } else {
+                image.src = 'iiiii.svg';
+            }
+        };
+    </script>
+</body>
+</html>
